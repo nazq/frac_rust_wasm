@@ -44,8 +44,8 @@ pub fn render_fractal(scale: f32, c_0_r: f32, c_0_i: f32, r_grad: f32, b_grad: f
         let cx = y as f32 * scalex - 1.5;
         let cy = x as f32 * scaley - 1.5;
 
-        let c = num_complex::Complex::new(c_0_r, c_0_i);
-        let mut z = num_complex::Complex::new(cx, cy);
+        let c = Complex::new(c_0_r, c_0_i);
+        let mut z = Complex::new(cx, cy);
 
         let mut i = 0;
         while i < 255 && z.norm() <= 2.0 {
